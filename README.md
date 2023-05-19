@@ -152,4 +152,4 @@ In our example:
 
 | Non-zero winding rule | Even-odd rule |
 | --- | --- |
-| ![Optimal QR code path with (self-)intersecting closed sections](./img/6.svg) | ![Optimal QR code path with (self-)intersecting closed sections](./4.svg) |
+| ![Optimal QR code path with (self-)intersecting closed sections](./img/6.svg) | ![Optimal QR code path with (self-)intersecting closed sections](./img/4.svg) |
