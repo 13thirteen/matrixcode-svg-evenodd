@@ -1,0 +1,33 @@
+{
+  "name": "matrixcode-svg-evenodd",
+  "version": "1.0.0",
+  "description": "Generate short SVG for 2D matrix codes using self-intersecting paths and the evenodd fill rule.",
+  "keywords": [
+    "svg",
+    "evenodd",
+    "nonzero",
+    "qr",
+    "qrcode",
+    "aztec",
+    "datamatrix",
+    "2d",
+    "barcode",
+    "matrix"
+  ],
+  "homepage": "https://github.com/13thirteen/matrixcode-svg-evenodd",
+  "license": "MIT",
+  "author": "Andreas Bilger",
+  "repository": "github:13thirteen/matrixcode-svg-evenodd",
+  "type": "module",
+  "main": "lib/matrixcode-svg-evenodd.js",
+  "types": "lib/matrixcode-svg-evenodd.d.ts",
+  "scripts": {
+    "build": "yarn build:js && yarn build:types",
+    "build:js": "esbuild ./src/index.ts --bundle --format=esm --target=es2020 --outfile=./lib/matrixcode-svg-evenodd.js",
+    "build:types": "tsc --outfile ./lib/matrixcode-svg-evenodd.d.ts"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.18",
+    "typescript": "^5.0.4"
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>matrixcode-svg-evenodd live demo - QR code</title>
+    <link rel="shortcut icon" type="image/svg+xml" sizes="32x32" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="qrcodegen-v1.8.0-es6.js" defer></script>
+    <script type="module" src="qrcode-svg-element.js"></script>
+    <script src="events.js" defer></script>
+  </head>
+  <body>
+    <h1>matrixcode-svg-evenodd</h1>
+    <h2>Live demo - QR code</h2>
+    <p>
+      Try the different path calculation approaches and see how the even-odd rule produces the shortest SVG code:
+    </p>
+    <div id="container">
+      <div id="input_value">
+        <label for="inp">Value:</label><br>
+        <textarea id="inp" cols="39">Test</textarea>
+      </div>
+      <fieldset id="input_algo">
+        <legend>Path calculation:</legend>
+        <div>
+          <input type="radio" id="blocks" name="algo">
+          <label for="blocks">Blocks</label>
+        </div>
+        <div>
+          <input type="radio" id="runlength" name="algo">
+          <label for="runlength">Run-length encoding</label>
+        </div>
+        <div>
+          <input type="radio" id="evenodd" name="algo" checked>
+          <label for="evenodd">Even-odd rule</label>
+        </div>
+      </fieldset>
+      <fieldset id="input_display">
+        <legend>Path display options:</legend>
+        <div>
+          <input type="radio" id="fill" name="mode">
+          <label for="fill">Normal (fill only)</label>
+        </div>
+        <div>
+          <input type="radio" id="stroke" name="mode" checked>
+          <label for="stroke">Contours (stroke)</label>
+        </div>
+        <div>
+          <input type="radio" id="separate" name="mode">
+          <label for="separate">Colored contours</label>
+        </div>
+        <div>
+          <input type="radio" id="animate" name="mode">
+          <label for="animate">Animated contours</label>
+        </div>
+      </fieldset>
+      <div id="output_code">
+        <qrcode-svg id="code" value="Test" algo="evenodd" mode="stroke" quiet="0" fill="#000" stroke="#000" stroke-width="0.2" width="300" height="300"></qrcode-svg>
+      </div>
+      <div id="output_length">
+        Length: <span id="len"></span>
+      </div>
+      <div id="output_text">
+        <pre id="txt">
+        </pre>
+        <button id="button_copy">Copy to clipboard</button>
+      </div>
+    </div>
+    <h2>Project</h2>
+    Go back to the <a href="https://github.com/13thirteen/matrixcode-svg-evenodd">matrixcode-svg-evenodd project</a>.
+  </body>
+</html>
