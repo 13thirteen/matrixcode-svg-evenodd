@@ -17,7 +17,7 @@ Generate short SVG for 2D matrix codes using self-intersecting paths and the eve
 
 ## Installation
 ```sh
-yarn add git://github.com/13thirteen/matrixcode-svg-evenodd.git
+npm install git://github.com/13thirteen/matrixcode-svg-evenodd.git#main
 ```
 
 ## Usage
